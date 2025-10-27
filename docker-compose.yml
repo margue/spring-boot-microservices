@@ -1,0 +1,36 @@
+services:
+  # Zipkin - Distributed Tracing
+  zipkin:
+    image: openzipkin/zipkin:latest
+    container_name: zipkin
+    ports:
+      - "9411:9411"
+    networks:
+      - hotel-booking-network
+    environment:
+      - STORAGE_TYPE=mem
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:9411/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+
+  # Hotel Booking Service - Main Application
+  hotel-booking-service:
+    build:
+      context: ./aufgabe_1
+      dockerfile: Dockerfile
+    container_name: hotel-booking-service
+    ports:
+      - "8080:8080"
+    networks:
+      - hotel-booking-network
+    environment:
+      - MANAGEMENT_ZIPKIN_TRACING_ENDPOINT=http://zipkin:9411/api/v2/spans
+    restart: unless-stopped
+
+networks:
+  hotel-booking-network:
+    driver: bridge
