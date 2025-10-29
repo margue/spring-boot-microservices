@@ -86,9 +86,32 @@ herunterfahren.
 
 ## Kopplung und Kohäsion
 
-Vortrag von Kent Beck auf der DDD Europe 2023: [A Daily Practice of Empirical Software Design - Kent Beck - DDD Europe 2023](https://youtu.be/yBEcq23OgB4?si=PAEP7DgKhxvLJvTJ)
+[A Daily Practice of Empirical Software Design - Kent Beck - DDD Europe 2023](https://youtu.be/yBEcq23OgB4?si=PAEP7DgKhxvLJvTJ) - Vortrag von Kent Beck auf der DDD Europe 2023
 
 ## Architekturdokumentation
 
 [Arc42](https://arc42.de/)
-[C4 Model von Simon Brown](https://c4model.com/)
+
+[C4 Model](https://c4model.com/) -  von Simon Brown
+
+## Event Storming
+
+[Event Storming](https://eventstorming.com/) von Alberto Brandolini
+
+[Event Storming Glossary Sheet](https://github.com/ddd-crew/eventstorming-glossary-cheat-sheet) - Anleitung zum Event Storming
+
+## Collaborative Modeling
+
+[DDD Starter Modling Process](https://github.com/ddd-crew/ddd-starter-modelling-process) - Übersicht über Collaborative Modeling Mehtoden
+
+[CoMo Camp](https://comocamp.org) - Unconference zu Collaborative Modeling Methoden
+
+## Mutation Testing in Java
+
+[Mutation Testing](https://pitest.org)
+
+## Bücher
+
+[Langlebige Softwarearchitekturen](https://dpunkt.de/produkt/langlebige-software-architekturen-4/) von Carola Lilienthal
+
+[Get Your Hands Dirty on Clean Architecture](https://leanpub.com/get-your-hands-dirty-on-clean-architecture) von Tom Hombergs
