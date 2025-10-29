@@ -81,3 +81,14 @@ Anschließend die Services wieder mit
 docker-compose down
 ```
 herunterfahren.
+
+# Referenzen
+
+## Kopplung und Kohäsion
+
+Vortrag von Kent Beck auf der DDD Europe 2023: [A Daily Practice of Empirical Software Design - Kent Beck - DDD Europe 2023](https://youtu.be/yBEcq23OgB4?si=PAEP7DgKhxvLJvTJ)
+
+## Architekturdokumentation
+
+[Arc42](https://arc42.de/)
+[C4 Model von Simon Brown](https://c4model.com/)
