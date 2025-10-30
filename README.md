@@ -95,6 +95,10 @@ herunterfahren.
 ## ValueObjects
 [Power Use of Value Objects in DDD](https://www.infoq.com/presentations/Value-Objects-Dan-Bergh-Johnsson/) - Vortrag von Dan Bergh Johnsson
 
+## Taktische Designpatterns des DDD im Typsystem abbilden
+
+[Advancing Enterprise DDD](https://scabl.blogspot.com/p/advancing-enterprise-ddd.html) - Blogreihe von John Sullivan
+
 ## Architekturdokumentation
 
 [Bessere Architekturdoku mit Hilfsmitteln aus dem Domain-driven Design – INNOQ Technology Lunch](https://www.youtube.com/live/g-4lCDsW1FE?si=JvbkNPbNZE3Vtmt8) - Vortrag von Michael Plöd
