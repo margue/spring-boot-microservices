@@ -90,9 +90,11 @@ herunterfahren.
 
 ## Architekturdokumentation
 
+[Bessere Architekturdoku mit Hilfsmitteln aus dem Domain-driven Design – INNOQ Technology Lunch](https://www.youtube.com/live/g-4lCDsW1FE?si=JvbkNPbNZE3Vtmt8) - Vortrag von Michael Plöd
+
 [Arc42](https://arc42.de/)
 
-[C4 Model](https://c4model.com/) -  von Simon Brown
+[C4 Model](https://c4model.com/) - von Simon Brown
 
 ## Event Storming
 
@@ -109,6 +111,14 @@ herunterfahren.
 ## Mutation Testing in Java
 
 [Mutation Testing](https://pitest.org)
+
+## SBOM - Software Bill of Materials
+
+Beispiele für Tools:
+
+[CycloneDX Maven Plugin](https://github.com/CycloneDX/cyclonedx-maven-plugin)
+
+[OWASP Dependency Track](https://dependencytrack.org)
 
 ## Bücher
 
