@@ -92,6 +92,9 @@ herunterfahren.
 
 [A Daily Practice of Empirical Software Design - Kent Beck - DDD Europe 2023](https://youtu.be/yBEcq23OgB4?si=PAEP7DgKhxvLJvTJ) - Vortrag von Kent Beck auf der DDD Europe 2023
 
+## ValueObjects
+[Power Use of Value Objects in DDD](https://www.infoq.com/presentations/Value-Objects-Dan-Bergh-Johnsson/) - Vortrag von Dan Bergh Johnsson
+
 ## Architekturdokumentation
 
 [Bessere Architekturdoku mit Hilfsmitteln aus dem Domain-driven Design – INNOQ Technology Lunch](https://www.youtube.com/live/g-4lCDsW1FE?si=JvbkNPbNZE3Vtmt8) - Vortrag von Michael Plöd
