@@ -297,6 +297,44 @@ public interface InvoiceServicePort {
 ### Implementierung des Adapters
 
 ```java
+package hotel.hotel;
+
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
+
+import java.time.Duration;
+
+/**
+ * Configuration class for REST client beans.
+ * Provides RestTemplate bean with timeout and error handling configuration.
+ * <p>
+ * This configuration is used by REST adapters to make inter-service HTTP calls.
+ */
+@Configuration
+@ConditionalOnMissingBean(RestTemplate.class)
+public class HotelRestClientConfiguration {
+
+    /**
+     * Creates and configures a RestTemplate bean.
+     * Sets connection timeout to 5 seconds and read timeout to 10 seconds.
+     *
+     * @param builder the RestTemplateBuilder provided by Spring Boot
+     * @return configured RestTemplate instance
+     */
+    @Bean
+    public RestTemplate restTemplate(RestTemplateBuilder builder) {
+        return builder
+                .setConnectTimeout(Duration.ofSeconds(5))
+                .setReadTimeout(Duration.ofSeconds(10))
+                .build();
+    }
+}
+```
+
+```java
 package hotel.payment;
 
 import org.slf4j.Logger;
