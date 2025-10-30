@@ -508,6 +508,12 @@ public class PaymentInvoiceServiceRestAdapter implements InvoiceServicePort {
 }
 ```
 
+## In Properties des hotel-booking-service hinzufügen
+```
+invoice-service:
+  url: http://localhost:8083
+```
+
 ## Properties des invoice-service anpassen
 ```
 server:
