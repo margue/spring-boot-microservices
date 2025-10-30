@@ -1,0 +1,17 @@
+spring:
+  # H2 In-Memory
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  # Hibernate DDL Strategie
+  jpa:
+    hibernate:
+      ddl-auto: update
+  # SQL-Ausgabe in Console
+    show-sql: true
+  # H2-Konsole aktivieren (im Browser erreichbar unter http://localhost:8080/h2-console)
+  h2:
+    console:
+      enabled: true

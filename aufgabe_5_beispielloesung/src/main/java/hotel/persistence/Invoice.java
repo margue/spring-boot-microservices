@@ -1,0 +1,63 @@
+package hotel.persistence;
+
+import jakarta.persistence.*;
+import org.jmolecules.ddd.annotation.AggregateRoot;
+import org.jmolecules.ddd.annotation.Identity;
+
+import java.util.*;
+import java.util.stream.Collectors;
+
+@AggregateRoot
+@Entity
+@Table(name = "invoices")
+public class Invoice {
+
+    @Identity
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    @Column(name = "customer_name")
+    private String customerName;
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "invoice_id")
+    @MapKey(name = "roomNumber")
+    private Map<String, RoomBookings> roomBookings = new HashMap<>();
+
+    @Column(name = "total_amount", nullable = false)
+    private double totalAmount;
+
+    // Für JPA erforderlicher Default-Konstruktor
+    protected Invoice() {
+    }
+
+    public Invoice(String customerName, Map<String, List<BookingInterval>> bookingsForRooms, double totalAmount) {
+        this.customerName = customerName;
+        this.roomBookings = toRoomBookings(bookingsForRooms);
+        this.totalAmount = totalAmount;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public double getTotalAmount() {
+        return totalAmount;
+    }
+
+    public static Map<String, RoomBookings> toRoomBookings(Map<String, List<BookingInterval>> bookingsForRooms) {
+        if (bookingsForRooms == null) {
+            return Collections.emptyMap();
+        }
+
+        return bookingsForRooms.entrySet().stream()
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        e -> {
+                            RoomBookings rb = new RoomBookings(e.getKey(), new ArrayList<>(e.getValue()));
+                            return rb;
+                        }
+                ));
+    }
+}
