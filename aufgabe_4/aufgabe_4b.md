@@ -176,6 +176,8 @@ public interface PaymentServicePort {
 
 ### Implementierung des Adapters
 
+Optional: Statt der Implementierung des Adapters kannst du auch [Spring Cloud OpenFeign](https://docs.spring.io/spring-cloud-openfeign/reference/spring-cloud-openfeign.html) nutzen.
+
 ```java
 package hotel.hotel;
 
