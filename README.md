@@ -84,6 +84,10 @@ herunterfahren.
 
 # Referenzen
 
+## Spring REST Client
+
+:bangbang: Hinweis: RestTemplate und Spring Cloud OpenFeign werden nicht mehr weiterentwickelt. Es wird empfohlen, stattdessen [Spring REST Client](https://docs.spring.io/spring-framework/reference/integration/rest-clients.html#rest-http-interface) zu verwenden.
+
 ## Kopplung und Kohäsion
 
 [A Daily Practice of Empirical Software Design - Kent Beck - DDD Europe 2023](https://youtu.be/yBEcq23OgB4?si=PAEP7DgKhxvLJvTJ) - Vortrag von Kent Beck auf der DDD Europe 2023
